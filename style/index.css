@@ -146,26 +146,28 @@ nav{
 }
 
 /*Shop Section Styles*/
-#shop{
-    padding-bottom:0;
-}
+
 .container{
     display:flex;
-    flex-flow: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container div{
+    width:30%;
+    margin:2% 0;
+    
 }
 .container2{
     display:flex;
     flex-flow: row;
-}
-
-.cacti, .tropicals, .succulants, .text{
-    width:50%;
 }
 .text{
     padding:1%;
     display:flex;
     justify-content: center;
     text-align:center;
+    width:50%;
 }
 .text div{
     width:100%;
@@ -181,15 +183,7 @@ nav{
     background-color:#ffffff1a;
     border:2px solid rgba(255, 255, 255, 0.568);
 }
-.succulants{
-    background-image:url('../images/something-spicy.jpg');
-}
-.cacti{
-    background-image:url('../images/cacti.jpg');
-}
-.tropicals{
-    background-image:url('../images/tropicals.jpg');
-}
+
 #contactme{
 	display:flex;
     justify-content: center;
@@ -230,4 +224,25 @@ footer a, footer h3{
 .bottom p{
     margin-right:5%;
     margin-top:2%;
+}
+@media (max-width: 500px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+    .bg-img{
+        width:80%;
+        margin: 2% auto;
+        margin-top: 45%;
+    }
+    .container div{
+        width:40%;
+    }
 }
