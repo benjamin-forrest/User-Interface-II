@@ -1,1 +1,248 @@
-/* Add CSS styling here */
+	/*CSS Reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    max-width:100%;
+    /*border:1px solid grey;*/
+}
+
+/*General Styles*/
+html{
+    font-size:62.5%;
+}
+body{
+    font-size:1.8rem;
+    line-height:1.5;
+    color:#4f4f4f;
+    background-color:#000000;
+    font-family: 'La Belle Aurore', cursive;
+}
+h1{
+    color:#FBFFFB;
+    font-size:6rem;
+    font-family: 'La Belle Aurore', cursive;
+}
+h2{
+    font-size:3rem;
+}
+h3{
+    font-size:2.2rem;
+}
+h2, h3{
+    color:#266035;
+    text-align:center;
+    font-family: 'Oxygen', sans-serif;
+    margin-bottom:5%;
+}
+a{
+    text-decoration: none;
+	font-family: 'La Belle Aurore', cursive;
+    color:#266035;
+    
+}
+button{
+    font-family: 'La Belle Aurore', cursive;
+    font-size:1.8rem;
+    padding:2% 4%;
+    margin-top:4%;
+}
+section, footer{
+    padding: 2px;
+}
+/*helper classes*/
+.bg-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	
+}
+
+/*header section styles*/
+nav{
+    display:flex;
+    justify-content: space-between;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index: 999; /*everything should scroll behind this*/
+    background-color:#ffffff2c;
+	
+}
+.signature{
+    width:20%;
+}
+.links{
+    width:50%;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+	
+}
+
+/*top section styles*/
+#top{
+    height:90vh;
+    background-image: url('../images/main-background.jpg');
+    background-position: bottom;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+#top button{
+    color:#bdbdbd;
+    background-color:rgba(255, 255, 255, 0);
+    transition:1.5s;
+	border:2px solid rgba(255, 255, 255, 0.459);
+}
+#top button:hover{
+    color:rgba(255, 255, 255, 0.925);
+    background-color:#ffffff1a;
+    border:2px solid rgba(255, 255, 255, 0.568);
+}
+
+/*About Section Styles*/ 
+#about{
+    height:85vh;
+    background-image:url('../images/main-background.jpg');
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#about div{
+    width:20%;
+    margin-right:10%;
+}
+
+/*Shop Section Styles*/
+
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container div{
+    width:30%;
+    margin:2% 0;
+    
+}
+.container2{
+    display:flex;
+    flex-flow: row;
+}
+.text{
+    padding:1%;
+    display:flex;
+    justify-content: center;
+    text-align:center;
+    width:50%;
+}
+.text div{
+    width:100%;
+}
+.text button{
+    color:#bdbdbd;
+    background-color:rgba(255, 255, 255, 0);
+    transition:1.5s;
+	border:2px solid rgba(255, 255, 255, 0.459);
+}
+.text button:hover{
+    color:rgba(255, 255, 255, 0.925);
+    background-color:#ffffff1a;
+    border:2px solid rgba(255, 255, 255, 0.568);
+}
+
+#contactme{
+	display:flex;
+    justify-content: center;
+    text-align:center;
+}
+/*footer section styles*/
+footer{
+    background-color:#000000;
+    display:flex;
+    flex-wrap:wrap;
+    color:#fff;
+}
+footer h2{
+    color:#fff;
+    width:100%;
+}
+footer a, footer h3{
+    color:#fff;
+    text-align:left;
+}
+.right, .left{
+    width:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.left div.info{
+    width:60%;
+    line-height:2.5;
+}
+.right img{
+    width:60%;
+}
+.bottom{
+    width:100%;
+    text-align:right;
+}
+.bottom p{
+    margin-right:5%;
+    margin-top:2%;
+}
+@media (max-width: 500px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+    .bg-img{
+        width:80%;
+        margin: 2% auto;
+        margin-top: 45%;
+    }
+    .container div{
+        width:40%;
+    }
+}
